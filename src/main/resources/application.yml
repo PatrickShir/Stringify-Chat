@@ -1,0 +1,26 @@
+#Allows messages to be sent e.g. from ResponseStatusException
+server:
+  error:
+   include-message: always
+
+spring:
+
+  jpa:
+    open-in-view: true
+
+    hibernate:
+      ddl-auto: update
+      use-new-id-generator-mappings:
+
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: true
+
+app:
+  datasource:
+    jdbc-url: ${DB_URL}
+    username: ${DB_USER}
+    password: ${DB_PASS}
+---
+
